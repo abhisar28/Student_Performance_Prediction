@@ -1,4 +1,5 @@
 import sys
+from src.logger import logging
 
 def error_message_detail(error, error_detail: sys):
     _,_,exc_tb = error_detail.exc_info() # Get the exception traceback information. The exc_info() function returns a tuple of three values: type, value, and traceback.And we want only Thrid value.
@@ -10,8 +11,9 @@ def error_message_detail(error, error_detail: sys):
 
 class CustomException(Exception):
     def __init__(self, error_message, error_detail: sys):
-        super.__init__(self.error_message)
+        super().__init__(self.error_message)
         self.error_message = error_message_detail(error_message,error_detail = error_detail)
 
     def __str__(self):
         return self.error_message
+    
