@@ -171,10 +171,6 @@ See `src/logger.py` for configuration.
 - API deployment
 - Prediction pipeline for new data
 
-## License
-
-MIT
-
 ## Contact
 
 For questions or issues, contact: abhisardhengare@gmail.com
